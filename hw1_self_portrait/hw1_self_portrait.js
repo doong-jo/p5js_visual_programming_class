@@ -24,23 +24,38 @@ const POS_HOUSE_Y = HEIGHT / 2 - HEIGHT / 8;
 
 const MARGIN_ROOF = 10;
 
-let starRandX = [];
-let starRandY = [];
+//let starRandX = [];
+//let starRandY = [];
 
 
 function setup() {
   createCanvas(WIDTH,HEIGHT);
   
-  for(var i=0; i<NUM_STARS; i++) {
-   starRandX[i] = random(WIDTH);
-   starRandY[i] = random(HEIGHT);
-  }
+  //for(var i=0; i<NUM_STARS; i++) {
+  // starRandX[i] = random(WIDTH);
+  // starRandY[i] = random(HEIGHT);
+  // console.log(starRandX[i], starRandY[i]);
+  //}
 }
 
 function draw() {
   background(COLOR_SPACE);
   
-  for(var i=0; i<NUM_STARS; i++) drawStar(starRandX[i], starRandY[i]);
+  //for(var i=0; i<NUM_STARS; i++) drawStar(starRandX[i], starRandY[i]);
+  drawStar(509, 54);
+  drawStar(259, 503);
+  drawStar(314, 221);
+  drawStar(29, 88);
+  drawStar(349, 297);
+  drawStar(372, 391);
+  drawStar(394, 509);
+  drawStar(188, 444);
+  drawStar(388, 78);
+  drawStar(26, 345);
+  drawStar(475, 338);
+  drawStar(583, 180);
+  drawStar(51, 596);
+  drawStar(348, 500);
   drawMoon();
   drawMoonCreator();
   drawHouse();
@@ -79,12 +94,34 @@ function drawHouseFace() {
 }
 
 function drawRoof() {
-  for(var i=1; i<NUM_ROOF; i++) {
-    const x = i * MARGIN_ROOF + POS_HOUSE_X;
-    const y = POS_HOUSE_Y;
-    stroke(color(COLOR_STAR));
-    line(x, y, x, y - SIZE_ROOF);
-  }
+  stroke(color(COLOR_STAR));
+  line(210, 225, 210, 225 - SIZE_ROOF);
+  line(220, 225, 220, 225 - SIZE_ROOF);
+  line(230, 225, 230, 225 - SIZE_ROOF);
+  line(240, 225, 240, 225 - SIZE_ROOF);
+  line(250, 225, 250, 225 - SIZE_ROOF);
+  line(260, 225, 260, 225 - SIZE_ROOF);
+  line(270, 225, 270, 225 - SIZE_ROOF);
+  line(280, 225, 280, 225 - SIZE_ROOF);
+  line(290, 225, 290, 225 - SIZE_ROOF);
+  line(300, 225, 300, 225 - SIZE_ROOF);
+  line(310, 225, 310, 225 - SIZE_ROOF);
+  line(320, 225, 320, 225 - SIZE_ROOF);
+  line(330, 225, 330, 225 - SIZE_ROOF);
+  line(340, 225, 340, 225 - SIZE_ROOF);
+  line(350, 225, 350, 225 - SIZE_ROOF);
+  line(360, 225, 360, 225 - SIZE_ROOF);
+  line(370, 225, 370, 225 - SIZE_ROOF);
+  line(380, 225, 380, 225 - SIZE_ROOF);
+  line(390, 225, 390, 225 - SIZE_ROOF);
+    
+  //for(var i=1; i<NUM_ROOF; i++) {
+  //  const x = i * MARGIN_ROOF + POS_HOUSE_X;
+  //  const y = POS_HOUSE_Y;
+  //  stroke(color(COLOR_STAR));
+  //  line(x, y, x, y - SIZE_ROOF);
+  //  console.log(x, y);
+  //}
 }
 
 function drawMoonCreator() {
